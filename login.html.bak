@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            background-color: #f0f0f0;
+	    background-image:url('https://previews.123rf.com/images/uiliaaa/uiliaaa1711/uiliaaa171100031/89719765-different-books-seamless-pattern-vector-illustration-of-color-cartoon-books-and-letters-literature.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            font-style: oblique;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"],
+        input[type="reset"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            font-family: "Roboto", sans-serif;
+            font-style: italic;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 30%;
+            margin-right: 5%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 0;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block; /* Display buttons inline */
+        }
+
+        input[type="reset"] {
+            width: 30%;
+            background-color: #f44336;
+        }
+
+        h4 {
+            text-align: center;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-style: oblique;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <form name="login" action="login.jsp" method="post" onsubmit="return validateForm()">
+            <table>
+                <tr><th>Enter Username:</th><td colspan="3"><input type="text" name="uname" id="uname"/></td></tr>
+                <tr><th>Enter Password:</th><td colspan="3"><input type="password" name="pwd" id="pwd"/></td></tr>
+                <tr><td colspan="4" style="text-align: center;"><input type="submit" value="Submit"/><input type="reset" value="Reset"/></td></tr>
+            </table>
+        </form>
+        <h4>Don't have an account? <a href="register.html">Register Now!</a></h4>
+    </div>
+
+    <script>
+        function validateForm() {
+            var uname = document.forms["login"]["uname"].value;
+            var pwd = document.forms["login"]["pwd"].value;
+            if (uname == "" || pwd == "") {
+                alert("Please fill in all fields");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

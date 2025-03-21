@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+			background-image:url('https://previews.123rf.com/images/uiliaaa/uiliaaa1711/uiliaaa171100031/89719765-different-books-seamless-pattern-vector-illustration-of-color-cartoon-books-and-letters-literature.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="radio"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin-top: 10px;
+            padding: 5px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 align='center'>Registration Form</h1>
+    <form name="register" action="register.jsp" onsubmit="return validateForm()">
+        <table>
+          
+            <tr>
+                <td>Enter Student id:</td>
+                <td><input type="number" name="sid" required/></td>
+            </tr>
+            <tr>
+                <td>Enter Student Name:</td>
+                <td><input type="text" name="sname" required/></td>
+            </tr>
+            <tr>
+                <td>Enter Student Username:</td>
+                <td><input type="email" name="suname" required/></td>
+            </tr>
+            <tr>
+                <td>Enter Student Password:</td>
+                <td><input type="password" name="spwd" required/></td>
+            </tr>
+            <tr>
+                <td>Choose Gender:</td>
+                <td>
+                    <input type="radio" name="sgender" value="male" required/>Male
+                    <input type="radio" name="sgender" value="female"/>Female
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Student Address:</td>
+                <td><input type="text" name="saddr" required/></td>
+            </tr>
+            <tr>
+                <td>Enter Student Phone no:</td>
+                <td><input type="number" name="sphno" required/></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit"/>
+                    <input type="reset"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var elements = document.forms["register"].elements;
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].value.trim() === "" && elements[i].hasAttribute("required")) {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+
+</body>
+</html>
