@@ -186,26 +186,7 @@ nav ul li a img {
             </ul>
         </nav>
     </header>
-    <!--<script>
-        window.onload = function() {
-            // Get the URL query parameters
-            var urlParams = new URLSearchParams(window.location.search);
-            var loggedIn = urlParams.get('loggedIn');  // Check if loggedIn parameter exists
-
-            // Get the login and logout elements
-            var loginLink = document.getElementById("loginLink");
-            var logoutLink = document.getElementById("logoutLink");
-
-            // Toggle the visibility based on login status
-            if (loggedIn === 'true') {
-                loginLink.style.display = 'none'; // Hide login link
-                logoutLink.style.display = 'inline'; // Show logout link
-            } else {
-                loginLink.style.display = 'inline'; // Show login link
-                logoutLink.style.display = 'none'; // Hide logout link
-            }
-        };
-    </script>-->
+   
     <div class="container">
         <div class="book-genre">
             <h2 style="color:purple;">Manga</h2>
